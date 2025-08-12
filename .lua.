@@ -1,0 +1,8 @@
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local PetFolder = player:WaitForChild("Pets")
+
+for _, pet in pairs(PetFolder:GetChildren()) do
+    local petClone = pet:Clone()
+    petClone.Parent = PetFolder
+end
